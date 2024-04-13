@@ -77,6 +77,8 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.crEaTiiOn_LinkLabel1 = new CBH.Controls.CrEaTiiOn_LinkLabel();
             this.crEaTiiOn_Message2 = new CBH.Controls.CrEaTiiOn_Message();
             this.TimerDnT = new System.Windows.Forms.Timer(this.components);
+            this.SetnameCBH = new CBH.Ultimate.Controls.CrEaTiiOn_Ultimate_FancyButton();
+            this.SetNameEMC = new CBH.Ultimate.Controls.CrEaTiiOn_Ultimate_FancyButton();
             this.crEaTiiOn_ModernTabPage1.SuspendLayout();
             this.Main.SuspendLayout();
             this.crEaTiiOn_ModernGroupBox1.SuspendLayout();
@@ -285,7 +287,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.crEaTiiOn_ModernGroupBox4.GroupBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.crEaTiiOn_ModernGroupBox4.Image = null;
             this.crEaTiiOn_ModernGroupBox4.LBlendColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
-            this.crEaTiiOn_ModernGroupBox4.Location = new System.Drawing.Point(263, 138);
+            this.crEaTiiOn_ModernGroupBox4.Location = new System.Drawing.Point(359, 138);
             this.crEaTiiOn_ModernGroupBox4.Movable = true;
             this.crEaTiiOn_ModernGroupBox4.Name = "crEaTiiOn_ModernGroupBox4";
             this.crEaTiiOn_ModernGroupBox4.NoRounding = false;
@@ -416,7 +418,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.crEaTiiOn_ModernGroupBox3.Name = "crEaTiiOn_ModernGroupBox3";
             this.crEaTiiOn_ModernGroupBox3.NoRounding = false;
             this.crEaTiiOn_ModernGroupBox3.Sizable = true;
-            this.crEaTiiOn_ModernGroupBox3.Size = new System.Drawing.Size(250, 231);
+            this.crEaTiiOn_ModernGroupBox3.Size = new System.Drawing.Size(267, 231);
             this.crEaTiiOn_ModernGroupBox3.SmartBounds = true;
             this.crEaTiiOn_ModernGroupBox3.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.crEaTiiOn_ModernGroupBox3.TabIndex = 19;
@@ -441,7 +443,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.btnRefreshTemps.HoverOverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btnRefreshTemps.Location = new System.Drawing.Point(149, 179);
             this.btnRefreshTemps.Name = "btnRefreshTemps";
-            this.btnRefreshTemps.Size = new System.Drawing.Size(90, 48);
+            this.btnRefreshTemps.Size = new System.Drawing.Size(112, 48);
             this.btnRefreshTemps.TabIndex = 14;
             this.btnRefreshTemps.Text = "Refresh Temps";
             this.btnRefreshTemps.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
@@ -457,7 +459,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.BoxCPUKey.ForeColor = System.Drawing.Color.Gray;
             this.BoxCPUKey.Location = new System.Drawing.Point(3, 37);
             this.BoxCPUKey.Name = "BoxCPUKey";
-            this.BoxCPUKey.Size = new System.Drawing.Size(236, 22);
+            this.BoxCPUKey.Size = new System.Drawing.Size(258, 22);
             this.BoxCPUKey.TabIndex = 13;
             this.BoxCPUKey.Text = "CPUKey:";
             // 
@@ -522,7 +524,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.BoxTitleID.ForeColor = System.Drawing.Color.Gray;
             this.BoxTitleID.Location = new System.Drawing.Point(3, 149);
             this.BoxTitleID.Name = "BoxTitleID";
-            this.BoxTitleID.Size = new System.Drawing.Size(236, 22);
+            this.BoxTitleID.Size = new System.Drawing.Size(258, 22);
             this.BoxTitleID.TabIndex = 8;
             this.BoxTitleID.Text = "Title ID:";
             // 
@@ -535,7 +537,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.Box360Type.ForeColor = System.Drawing.Color.Gray;
             this.Box360Type.Location = new System.Drawing.Point(3, 121);
             this.Box360Type.Name = "Box360Type";
-            this.Box360Type.Size = new System.Drawing.Size(236, 22);
+            this.Box360Type.Size = new System.Drawing.Size(258, 22);
             this.Box360Type.TabIndex = 7;
             this.Box360Type.Text = "Console Type:";
             // 
@@ -548,7 +550,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.Box360IP.ForeColor = System.Drawing.Color.Gray;
             this.Box360IP.Location = new System.Drawing.Point(3, 93);
             this.Box360IP.Name = "Box360IP";
-            this.Box360IP.Size = new System.Drawing.Size(236, 22);
+            this.Box360IP.Size = new System.Drawing.Size(258, 22);
             this.Box360IP.TabIndex = 6;
             this.Box360IP.Text = "Console IP:";
             // 
@@ -561,7 +563,7 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.BoxKernel.ForeColor = System.Drawing.Color.Gray;
             this.BoxKernel.Location = new System.Drawing.Point(3, 65);
             this.BoxKernel.Name = "BoxKernel";
-            this.BoxKernel.Size = new System.Drawing.Size(236, 22);
+            this.BoxKernel.Size = new System.Drawing.Size(258, 22);
             this.BoxKernel.TabIndex = 5;
             this.BoxKernel.Text = "Kernel:";
             // 
@@ -716,6 +718,8 @@ namespace CBHThmRGHJTAGRTERTMBase
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tabPage3.Controls.Add(this.SetNameEMC);
+            this.tabPage3.Controls.Add(this.SetnameCBH);
             this.tabPage3.Controls.Add(this.crEaTiiOn_Message1);
             this.tabPage3.Controls.Add(this.btnSetBO2Name);
             this.tabPage3.Controls.Add(this.btnGetBO2Name);
@@ -872,6 +876,52 @@ namespace CBHThmRGHJTAGRTERTMBase
             this.TimerDnT.Enabled = true;
             this.TimerDnT.Tick += new System.EventHandler(this.TimerDnT_Tick);
             // 
+            // SetnameCBH
+            // 
+            this.SetnameCBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetnameCBH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetnameCBH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetnameCBH.BorderRadius = 20;
+            this.SetnameCBH.BorderSize = 0;
+            this.SetnameCBH.ClickedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetnameCBH.FlatAppearance.BorderSize = 0;
+            this.SetnameCBH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetnameCBH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.SetnameCBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SetnameCBH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetnameCBH.HoverOverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.SetnameCBH.Location = new System.Drawing.Point(172, 91);
+            this.SetnameCBH.Name = "SetnameCBH";
+            this.SetnameCBH.Size = new System.Drawing.Size(90, 20);
+            this.SetnameCBH.TabIndex = 25;
+            this.SetnameCBH.Text = "PresetName#1";
+            this.SetnameCBH.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetnameCBH.UseVisualStyleBackColor = false;
+            this.SetnameCBH.Click += new System.EventHandler(this.SetnameCBH_Click);
+            // 
+            // SetNameEMC
+            // 
+            this.SetNameEMC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetNameEMC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetNameEMC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetNameEMC.BorderRadius = 20;
+            this.SetNameEMC.BorderSize = 0;
+            this.SetNameEMC.ClickedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetNameEMC.FlatAppearance.BorderSize = 0;
+            this.SetNameEMC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.SetNameEMC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.SetNameEMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SetNameEMC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetNameEMC.HoverOverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.SetNameEMC.Location = new System.Drawing.Point(268, 89);
+            this.SetNameEMC.Name = "SetNameEMC";
+            this.SetNameEMC.Size = new System.Drawing.Size(90, 20);
+            this.SetNameEMC.TabIndex = 26;
+            this.SetNameEMC.Text = "PresetName#2";
+            this.SetNameEMC.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.SetNameEMC.UseVisualStyleBackColor = false;
+            this.SetNameEMC.Click += new System.EventHandler(this.SetNameEMC_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -958,6 +1008,8 @@ namespace CBHThmRGHJTAGRTERTMBase
         private CBH.Controls.CrEaTiiOn_Message crEaTiiOn_Message2;
         private CBH.Controls.CrEaTiiOn_LinkLabel crEaTiiOn_LinkLabel1;
         private CBH.Controls.CrEaTiiOn_LinkLabel crEaTiiOn_LinkLabel2;
+        private CBH.Ultimate.Controls.CrEaTiiOn_Ultimate_FancyButton SetNameEMC;
+        private CBH.Ultimate.Controls.CrEaTiiOn_Ultimate_FancyButton SetnameCBH;
     }
 }
 

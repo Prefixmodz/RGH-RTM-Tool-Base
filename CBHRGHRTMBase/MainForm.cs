@@ -186,10 +186,11 @@ namespace CBHThmRGHJTAGRTERTMBase
             try
             {
                 string Gamename = this.XBOX.DebugTarget.RunningProcessInfo.ProgramName; // From an Open source tool on git thanks to the developer for uploading.
+                string Gamename2 = XBOX.DebugTarget.RunningProcessInfo.ProgramName;
                 string EMC = Gamename.Replace("\\Device\\Harddisk0\\Partition1", "Hdd:");
                 string xbGuard = EMC;
                 int length = xbGuard.LastIndexOf("\\");
-                XBOX.XNotify(Gamename + "Restarting!");
+                XBOX.XNotify(Gamename2 + "Restarting!");
                 this.XBOX.Reboot(EMC, EMC.Substring(0, length), null, XboxRebootFlags.Title);
             }
             catch
@@ -219,6 +220,40 @@ namespace CBHThmRGHJTAGRTERTMBase
             string EternalModzGithubLink = "https://github.com/EternalModz";
             Process.Start(EternalModzGithubLink);
 
+        }
+
+        private void SetnameCBH_Click(object sender, EventArgs e)
+        {
+            XBOX.SetMemory(0x82C55D00, new byte[] { 0x7C, 0x83, 0x23, 0x78, 0x3D, 0x60, 0x82, 0xC5, 0x38, 0x8B, 0x5D, 0x60, 0x3D, 0x60, 0x82, 0x4A, 0x39, 0x6B, 0xDC, 0xA0, 0x38, 0xA0, 0x00, 0x20, 0x7D, 0x69, 0x03, 0xA6, 0x4E, 0x80, 0x04, 0x20 });//Injects hook into empty memory
+            /*Entry Address = 0x8293D724
+             * lis r11, 0x82c5
+             * addi r11, r11, 0x5d00
+             * mtctr r11
+             * bctr*/
+            XBOX.SetMemory(0x8293D724, new byte[] { 0x3D, 0x60, 0x82, 0xC5, 0x39, 0x6B, 0x5D, 0x00, 0x7D, 0x69, 0x03, 0xA6, 0x4E, 0x80, 0x04, 0x20 });//PatchInJumps XamGetUserName to the hook previously written
+            XBOX.SetMemory(0x8259B6A7, new byte[] { 0x00 });//Patch 1
+            XBOX.SetMemory(0x822D1110, new byte[] { 0x40 });//Patch 2
+            //XBOX.SetMemory(0x841E1B30, Encoding.ASCII.GetBytes(BoxBO2Name.Text));//In Game
+            //XBOX.SetMemory(0x82C55D60, Encoding.UTF8.GetBytes(BoxBO2Name.Text));//Write 32 Chars Pregame  // From an open source tool on git never did anything with 360 its not as simple as on PS3 They patched name change stuff on here? lol 
+            XBOX.WriteString(0x841E1B30, "^1CBH");
+            XBOX.WriteString(0x82C55D60, "^1CBH");
+        }
+
+        private void SetNameEMC_Click(object sender, EventArgs e)
+        {
+            XBOX.SetMemory(0x82C55D00, new byte[] { 0x7C, 0x83, 0x23, 0x78, 0x3D, 0x60, 0x82, 0xC5, 0x38, 0x8B, 0x5D, 0x60, 0x3D, 0x60, 0x82, 0x4A, 0x39, 0x6B, 0xDC, 0xA0, 0x38, 0xA0, 0x00, 0x20, 0x7D, 0x69, 0x03, 0xA6, 0x4E, 0x80, 0x04, 0x20 });//Injects hook into empty memory
+            /*Entry Address = 0x8293D724
+             * lis r11, 0x82c5
+             * addi r11, r11, 0x5d00
+             * mtctr r11
+             * bctr*/
+            XBOX.SetMemory(0x8293D724, new byte[] { 0x3D, 0x60, 0x82, 0xC5, 0x39, 0x6B, 0x5D, 0x00, 0x7D, 0x69, 0x03, 0xA6, 0x4E, 0x80, 0x04, 0x20 });//PatchInJumps XamGetUserName to the hook previously written
+            XBOX.SetMemory(0x8259B6A7, new byte[] { 0x00 });//Patch 1
+            XBOX.SetMemory(0x822D1110, new byte[] { 0x40 });//Patch 2
+            //XBOX.SetMemory(0x841E1B30, Encoding.ASCII.GetBytes(BoxBO2Name.Text));//In Game
+            //XBOX.SetMemory(0x82C55D60, Encoding.UTF8.GetBytes(BoxBO2Name.Text));//Write 32 Chars Pregame  // From an open source tool on git never did anything with 360 its not as simple as on PS3 They patched name change stuff on here? lol 
+            XBOX.WriteString(0x841E1B30, "^2|E|MC");
+            XBOX.WriteString(0x82C55D60, "^2|E|MC");
         }
     }
 }
