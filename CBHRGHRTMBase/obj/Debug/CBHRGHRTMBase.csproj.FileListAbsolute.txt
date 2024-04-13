@@ -1,8 +1,6 @@
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\bin\Debug\CBHRGHRTMBase.exe.config
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\bin\Debug\CBHRGHRTMBase.exe
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\bin\Debug\CBHRGHRTMBase.pdb
-C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\bin\Debug\Be.Windows.Forms.HexBox.dll
-C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\bin\Debug\JRPC.dll
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\obj\Debug\CBHRGHRTMBase.csproj.AssemblyReference.cache
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\obj\Debug\CBHThmRGHJTAGRTERTMBase.MainForm.resources
 C:\Users\Keato\Documents\CBHRGHRTMBase\CBHRGHRTMBase\obj\Debug\CBHRGHRTMBase.Properties.Resources.resources

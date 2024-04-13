@@ -185,12 +185,12 @@ namespace CBHThmRGHJTAGRTERTMBase
         {
             try
             {
-                string Gamename = XBOXDebug.RunningProcessInfo.ProgramName;
-                string g123 = Gamename.Replace("\\Device\\Harddisk0\\Partition1", "Hdd:"); // From an open source tool on git thanks to the developer for uploading.
-                string g223 = g123;
-                int length = g223.LastIndexOf("\\");
+                string Gamename = this.XBOX.DebugTarget.RunningProcessInfo.ProgramName; // From an Open source tool on git thanks to the developer for uploading.
+                string EMC = Gamename.Replace("\\Device\\Harddisk0\\Partition1", "Hdd:");
+                string xbGuard = EMC;
+                int length = xbGuard.LastIndexOf("\\");
                 XBOX.XNotify(Gamename + "Restarting!");
-                XBOX.Reboot(g123, g223.Substring(0, length), null, XboxRebootFlags.Title);
+                this.XBOX.Reboot(EMC, EMC.Substring(0, length), null, XboxRebootFlags.Title);
             }
             catch
             {
